@@ -7,9 +7,9 @@ describe('App.jsx tests', () => {
     render(
     <App />
     );
-    const headerImg = await screen.findByAltText('Alchemy Logo');
+    await screen.findByAltText('Alchemy Logo');
     const profileName = await screen.findByText(/vonta/i);
-    expect(profileName.textContent).toEqual('Vonta')
+    expect(profileName.textContent).toEqual('Vonta');
 
   })
 })
