@@ -31,6 +31,11 @@ describe('Home.jsx tests', () => {
     const motto = screen.getByLabelText('motto');
     expect(motto).toBeInTheDocument()
     console.log(motto);
+
+    const interestsHeader = screen.getByRole('heading', {
+      level: 2
+    })
+    console.log(interestsHeader.textContent);
   })
 });
 
