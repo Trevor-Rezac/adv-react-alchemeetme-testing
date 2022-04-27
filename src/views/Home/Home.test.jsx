@@ -23,10 +23,14 @@ describe('Home.jsx tests', () => {
       </MemoryRouter>
     )
 
-    screen.getByRole('heading', {
+    const profileName = screen.getByRole('heading', {
       level: 1
     })
+    console.log(profileName.textContent);
     
+    const motto = screen.getByLabelText('motto');
+    expect(motto).toBeInTheDocument()
+    console.log(motto);
   })
 });
 
